@@ -1,16 +1,20 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>Sunwapta.ConfigTransform</id>
+    <version>1.0.2</version>
+    <title>Sunwapta ConfigTransform</title>
+    <description>Command line transformation of web.config files</description>
+    <authors>Sunwapta Solutions Inc.</authors>
+    <owners>Sunwapta Solutions Inc.</owners>
     <projectUrl>https://github.com/glittle/ConfigTransform</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Include referenced project files</releaseNotes>
+    <releaseNotes>Remove lib folder from nuspec</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>web.config transform</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\Sunwapta.ConfigTransform.exe" target="tools"/>
+    <file src="..\build\Microsoft.Web.XmlTransform.dll" target="tools"/>
+  </files>
 </package>

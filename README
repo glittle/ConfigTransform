@@ -1,3 +1,16 @@
-﻿A wrapper around the Microsoft XmlTransformation functions.
+﻿This is a wrapper around the Microsoft XmlTransformation functions.
 
-Logs errors and warnings to the console.
+Logs errors and warnings to the console. If there is an error, the ErrorLevel is set to > 0.
+
+Example of using it in a batch file:
+
+```
+set sct=
+for /f "delims=" %%i in ('dir /b /a-d /s ..\packages\sunwapta.configtransform.exe') do set sct=%%~fi
+
+if ""=="%sct%" (
+  echo Sunwapta.ConfigTransform not found. Copying web.config directly.
+) else (
+  %sct% web.config web.release.config "%unc%\web.config"
+)
+```

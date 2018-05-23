@@ -1,1 +1,1 @@
-nuget pack  -Prop Configuration=Release -IncludeReferencedProjects 
+nuget pack ConfigTransform.nuspec -Prop Configuration=Release
