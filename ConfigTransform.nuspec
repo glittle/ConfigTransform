@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
+    <projectUrl>https://github.com/glittle/ConfigTransform</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>First release.</releaseNotes>
+    <releaseNotes>Include referenced project files</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>web.config transform</tags>
   </metadata>

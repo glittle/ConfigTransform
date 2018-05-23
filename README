@@ -1,0 +1,3 @@
+﻿A wrapper around the Microsoft XmlTransformation functions.
+
+Logs errors and warnings to the console.
