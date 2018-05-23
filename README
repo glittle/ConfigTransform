@@ -1,6 +1,9 @@
 ﻿This is a wrapper around the Microsoft XmlTransformation functions.
 
-Logs errors and warnings to the console. If there is an error, the ErrorLevel is set to > 0.
+Logs errors and warnings to the console. If an error occurs, program exits with ErrorCode > 0.
+
+Syntax:
+  ConfigTransform <ConfigFilename> <TransformFilename> <ResultFilename> [/v]
 
 Example of using it in a batch file:
 
@@ -9,8 +12,8 @@ set sct=
 for /f "delims=" %%i in ('dir /b /a-d /s ..\packages\sunwapta.configtransform.exe') do set sct=%%~fi
 
 if ""=="%sct%" (
-  echo Sunwapta.ConfigTransform not found. Copying web.config directly.
+    echo Sunwapta.ConfigTransform.exe not found.
 ) else (
-  %sct% web.config web.release.config "%unc%\web.config"
+    %sct% web.config web.release.config "%unc%\web.config"
 )
 ```

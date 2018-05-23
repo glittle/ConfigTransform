@@ -6,12 +6,13 @@ using Microsoft.Web.XmlTransform;
 namespace ConfigTransform
 {
   /// <summary>
-  /// Transform web.config files.
+  ///   Transform web.config files.
   /// </summary>
   /// <remarks>Adapted from https://github.com/erichexter/WebConfigTransformRunner/ </remarks>
   static class Program
   {
     const string version = "1.0";
+
     static void Main(string[] args)
     {
       Console.WriteLine("ConfigTransform v" + version);
@@ -24,9 +25,9 @@ namespace ConfigTransform
       var configFilename = args[0];
       var transformFilename = args[1];
       var resultFilename = args[2];
-      var verboseLog = args.Length > 3 && args[3].Replace("/","").ToUpper() == "V";
+      var verboseLog = args.Length > 3 && args[3].Replace("/", "").ToUpper() == "V";
 
-      if (!System.IO.File.Exists(configFilename) || !System.IO.File.Exists(transformFilename))
+      if (!File.Exists(configFilename) || !File.Exists(transformFilename))
       {
         Console.WriteLine("The config or transform file do not exist!");
         ExitWith(2);
